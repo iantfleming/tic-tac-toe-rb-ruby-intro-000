@@ -65,8 +65,9 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
+  token = input
   if valid_move?(board, index)
-    move(board, index, current_player(input))
+    move(board, index, current_player(board))
     display_board(board)
   else
     turn(board)
@@ -125,19 +126,4 @@ def winner (board)
 end
 
 def play(board)
-  until over?(board)
-    turn(board)
-  end
 end
-
-=begin  
-  if won?(board)
-    winner(board) == "X" || winner(board) == "O" 
-    puts "Congratulations #{winner(board)}!"
-  end 
-  elsif draw?(board)
-    puts "Cats Game!" 
-  end
-end
-
-=end
