@@ -128,5 +128,5 @@ def winner (board)
 end
 
 def play(board)
-  
+  puts "Enter a number"
 end
