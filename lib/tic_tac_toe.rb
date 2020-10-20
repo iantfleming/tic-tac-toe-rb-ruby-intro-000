@@ -129,6 +129,7 @@ def play(board)
     turn(board)
   end
   if won?(board)
-    
-    puts "congratulations"
+    winner(board) == "X" || winner(board) == "O" 
+    puts "Congratulations #{winner(board)}!"
+  end  
 end
