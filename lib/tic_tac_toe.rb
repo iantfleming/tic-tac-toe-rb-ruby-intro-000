@@ -130,5 +130,6 @@ def play(board)
     turn(board)
   end
   if won?(board)
-    
+    winner(board) == "X" or winner(board) == "O"
+    puts congratulations 
 end
